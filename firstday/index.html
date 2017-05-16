@@ -25,10 +25,8 @@
         <div class="col m12">
           <img id="poster" class="col m6" src="http://static.mercadoshops.com/poster-eu-sou-lenda-cartaz-grande-filme-60x84cm-decoracao_iZ56940397XvZxXpZ1XfZ28632307-720614608-1.jpgXsZ28632307xIM.jpg" alt="poster do filme">
           <div class="col m6">
-            <p ng-show="show" class="white">Título: <input type="text" ng-model="titulo"></p>
-            <h4 ng-show="!show" class="white-text">{{titulo}}<h4>
-            <textarea ng-show="show" class="materialize-textarea white" ng-model="sinopse"></textarea>
-            <p ng-show="!show" id="sinopse" class="white-text">{{sinopse}}</p>
+            <h4 class="white-text">{{filme.original_title}}<h4>
+            <p id="sinopse" class="white-text">{{filme.overview}}</p>
             <button id="gerarfilme" class="btn light-blue lighten-1" ng-click="teste()">Gerar Filme</button>
           </div>
         </div>
