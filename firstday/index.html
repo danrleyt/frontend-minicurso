@@ -7,30 +7,35 @@
   <!-- Compiled and minified JavaScript -->
   <script src="materialize.min.js"></script>
   <script src="angular.min.js"></script>
+  <script src="js/app.js"></script>
   <title>Gerador de Filmes</title>
 </head>
 
-<body class="black" ng-app="">  <!--corpo do site-->
-    <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo" href="#" class="brand-logo">Logo</a>
-            <ul class="right">
-              <li><a href="#">Home</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="row" ng-init="show = true">
-      <div class="col m12">
-        <img id="poster" class="col m6" src="http://static.mercadoshops.com/poster-eu-sou-lenda-cartaz-grande-filme-60x84cm-decoracao_iZ56940397XvZxXpZ1XfZ28632307-720614608-1.jpgXsZ28632307xIM.jpg" alt="poster do filme">
-        <div class="col m6">
-          <p ng-show="show" class="white">Título: <input type="text" ng-model="titulo"></p>
-          <h4 ng-show="!show" class="white-text">{{titulo}}<h4>
-          <textarea ng-show="show" class="materialize-textarea white" ng-model="sinopse"></textarea>
-          <p ng-show="!show" id="sinopse" class="white-text">{{sinopse}}</p>
-          <button id="gerarfilme" class="btn light-blue lighten-1" ng-click="show=false">Gerar Filme</button>
+<body class="black" ng-app="filmeApp">  <!--corpo do site-->
+    <div ng-controller="FilmeCtrl">
+      <nav class="light-blue lighten-1" role="navigation">
+          <div class="nav-wrapper container">
+              <a id="logo" href="#" class="brand-logo">Logo</a>
+              <ul class="right">
+                <li><a href="#">Home</a></li>
+              </ul>
+          </div>
+      </nav>
+      <div class="row" ng-init="show = true">
+        <div class="col m12">
+          <img id="poster" class="col m6" src="http://static.mercadoshops.com/poster-eu-sou-lenda-cartaz-grande-filme-60x84cm-decoracao_iZ56940397XvZxXpZ1XfZ28632307-720614608-1.jpgXsZ28632307xIM.jpg" alt="poster do filme">
+          <div class="col m6">
+            <p ng-show="show" class="white">Título: <input type="text" ng-model="titulo"></p>
+            <h4 ng-show="!show" class="white-text">{{titulo}}<h4>
+            <textarea ng-show="show" class="materialize-textarea white" ng-model="sinopse"></textarea>
+            <p ng-show="!show" id="sinopse" class="white-text">{{sinopse}}</p>
+            <button id="gerarfilme" class="btn light-blue lighten-1" ng-click="">Gerar Filme</button>
+            <button ng-click="teste()">TESTE</button>
+          </div>
         </div>
       </div>
     </div>
+
 
 </body>
 
