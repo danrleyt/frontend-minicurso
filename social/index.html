@@ -11,7 +11,7 @@
   <title>Gerador de Filmes</title>
 </head>
 
-<body class="black" ng-app="filmeApp">  <!--corpo-->
+<body ng-app="filmeApp">  <!--corpo-->
     <div ng-controller="FilmeCtrl">
       <nav class="light-blue lighten-1" role="navigation">
           <div class="nav-wrapper container">
@@ -21,18 +21,19 @@
               </ul>
           </div>
       </nav>
-      <div class="row" ng-init="show = true">
-        <div class="col m12">
-          <input class="white col m12" ng-model="busca">
-          <button class="btn col m12" ng-click="teste()">Buscar</button>
-          <img id="poster" class="col m6" src="{{img}}" alt="poster do filme">
-          <div class="col m6">
-            <h4 class="white-text">{{filme.original_title}}<h4>
-            <p id="sinopse" class="white-text">{{filme.overview}}</p>
-            <p class="white-text">Nota: {{filme.vote_average}}</p>
-            <!--<button id="gerarfilme" class="btn light-blue lighten-1" ng-click="teste()">Gerar Filme</button>-->
+      <div class="row">
+          <div class="col m4">
+              <div class="card blue-grey darken-1">
+                  <div class="card-content white-text">
+                      <span class="card-title">Postar</span>
+                      <input type="text">
+                      <textarea></textarea>
+                  </div>
+                  <div class="card-action">
+                      <a href="#">Postar</a>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
     </div>
 
