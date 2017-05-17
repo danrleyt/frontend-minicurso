@@ -1,5 +1,5 @@
 angular.module('filmeApp',[])
-  .controller('FilmeCtrl', ['$scope','$http', function($scope, $http){
+  .controller('FilmeCtrl', ['$scope','$http','$timeout', function($scope, $http, $timeout){
     $scope.postar = function(){
         var url = 'http://rest.learncode.academy/api/learncode/minicurso'
         var postagem = {
@@ -28,7 +28,7 @@ angular.module('filmeApp',[])
                 alert("ocorreu um erro no GET");
             }
         );
-        
+        $timeout($scope.pegarPosts, 3000)
     };
 
   }])
