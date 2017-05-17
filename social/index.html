@@ -35,10 +35,10 @@
               </div>
           </div>
           <div class="col m8">
-              <div class="card light-blue lighten-1">
+              <div class="card light-blue lighten-1" ng-repeat="p in posts">
                   <div class="card-content white-text">
-                      <span class="card-title">Nome do Usuario</span>
-                      <h4>Texto do usuario</h4>
+                      <span class="card-title">{{p.nome}}</span>
+                      <h4>{{p.texto}}</h4>
                   </div>
               </div>
           </div>
