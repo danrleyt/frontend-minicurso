@@ -6,16 +6,20 @@ angular.module('filmeApp',[])
             nome: $scope.nome,
             texto: $scope.texto
         }
-        $http.post(url, postagem).then(
-            function(dados){
-                alert("Seu post foi enviado");
-                $scope.nome = "";
-                $scope.texto = "";
-            },
-            function(erro){
-                alert("Ocorreu um erro!");
-            }
-        )
+        if(($scope.nome !== "" && $scope.nome !== undefined) && ($scope.texto !== "" && $scope.texto !== undefined)){
+            $http.post(url, postagem).then(
+                function(dados){
+                    alert("Seu post foi enviado");
+                    $scope.nome = "";
+                    $scope.texto = "";
+                },
+                function(erro){
+                    alert("Ocorreu um erro!");
+                }
+            )
+        }else{
+            alert("Algum dos campos estäo vazios.");
+        }
     };
 
     $scope.pegarPosts = function(){
@@ -30,5 +34,4 @@ angular.module('filmeApp',[])
         );
         $timeout($scope.pegarPosts, 3000)
     };
-
   }])
