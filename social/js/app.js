@@ -19,7 +19,16 @@ angular.module('filmeApp',[])
     };
 
     $scope.pegarPosts = function(){
-
+        var url = 'http://rest.learncode.academy/api/learncode/minicurso'
+        $http.get(url).then(
+            function(dados){
+                $scope.posts = dados.data;
+            },
+            function(erro){
+                alert("ocorreu um erro no GET");
+            }
+        );
+        
     };
 
   }])

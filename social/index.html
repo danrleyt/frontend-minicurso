@@ -21,7 +21,7 @@
               </ul>
           </div>
       </nav>
-      <div class="row">
+      <div class="row" ng-init="pegarPosts()">
           <div class="col m4">
               <div class="card blue-grey darken-1">
                   <div class="card-content white-text">
@@ -30,7 +30,7 @@
                       <textarea ng-model="texto"></textarea>
                   </div>
                   <div class="card-action">
-                      <a href="#">Postar</a>
+                      <a href="#" ng-click="postar()">Postar</a>
                   </div>
               </div>
           </div>
